@@ -1,0 +1,321 @@
+:host ::ng-deep {
+  ion-menu {
+    --background: var(--ion-item-background, var(--ion-background-color, #fff));
+  }
+
+  ion-content {
+    --background: var(--ion-item-background, var(--ion-background-color, #fff));
+
+    nav.nav-menu {
+      background-color: var(--side-nav-background-color);
+      color: var(--ion-color-primary);
+      align-items: center;
+      justify-content: center;
+      padding: 5px 10px;
+      height: auto;
+
+      ul{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        li {
+          margin: 8px auto;
+
+          a {
+            margin: 0 auto;
+            color: #fff;
+            padding: 6px 6px;
+            width: 100%;
+            font-weight: bold;
+            font-size: 0.9rem;
+
+            .desktop-icon {
+              color: #fff;
+              width: 3.4rem;
+              height: auto;
+              display: block;
+              margin: 0 auto;
+            }
+
+            &.active-link {
+              color: var(--ion-color-secondary);
+              background-color: #fff;
+
+              .desktop-icon {
+                color: var(--ion-color-secondary);
+              }
+            }
+
+            &:hover {
+              background-color: #fff;
+              color: var(--side-nav-background-color);
+              .desktop-icon {
+                color: var(--side-nav-background-color);
+              }
+            }
+          }
+
+          nb-accordion {
+            nb-accordion-item {
+              nb-accordion-item-header {
+                background-color: var(--side-nav-background-color);
+                border: none;
+                padding: 0;
+
+                nb-icon {
+                  color: #fff;
+                }
+
+                a {
+                  text-decoration: none;
+                  text-align: center;
+                  color: #fff;
+                  padding: 10px 10px;
+                  width: 100%;
+                  font-weight: bold;
+                  font-size: 0.9rem;
+                }
+
+                &.accordion-item-header-expanded {
+                  background-color: #fff;
+                  color: var(--ion-color-secondary);
+                  nb-icon {
+                    color: var(--ion-color-secondary);
+                  }
+                  a {
+                    color: var(--ion-color-secondary);
+
+                    .desktop-icon {
+                      color: var(--ion-color-secondary);
+                    }
+                  }
+                }
+
+                &:hover {
+                  background-color: #fff;
+
+
+                  nb-icon {
+                    color: var(--side-nav-background-color);
+                  }
+                  a {
+                    color: var(--side-nav-background-color);
+
+                    .desktop-icon {
+                      color: var(--side-nav-background-color);
+                    }
+                  }
+                }
+              }
+
+              nb-accordion-item-body {
+                div > div {
+                  padding: 0 9px!important;
+                }
+                ul {
+                  padding-bottom: 0px;
+
+                  li {
+                    a {
+                      color: #000;
+                      font-weight: bold;
+                      font-size: 0.9rem;
+                      text-align: left;
+
+                      &.active-link-li {
+                        background-color: var(--ion-color-secondary);
+                        color: #fff;
+                        border-left: 5px solid #000;
+                      }
+
+                      &:hover {
+                        background-color: var(--ion-color-secondary);
+                        color: #fff;
+                        border-left: 5px solid #000;
+                      }
+
+                      .desktop-icon {
+                        color: #fff;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.nav-split-header-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  img {
+    width: 80%;
+  }
+}
+
+ion-footer {
+  ion-toolbar {
+    padding: 5px 10px;
+  }
+}
+
+.nav-split-footer-img {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 200px;
+}
+
+.split-pane-visible {
+  .split-pane-side {
+    min-width: 190px!important;
+    max-width: 250px!important;
+    width: 14%;
+  }
+}
+
+:host ::ng-deep {
+  ion-tabs.tab-mobile {
+    ion-tab-bar {
+      height: 60px;
+
+      ion-tab-button {
+        --background: var(--ion-background-color, #fff);
+        border-top: 8px solid var(--ion-color-primary);
+        border-left: 1px solid #ddd;
+        border-right: 1px solid #ddd;
+        nb-icon {
+          width: 2rem;
+          height: auto;
+          color: var(--ion-color-primary);
+        }
+
+        &.active-link {
+          background-color: var(--ion-color-primary);
+          border-top: 10px solid #fff;
+          nb-icon {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 460px) {
+
+  ion-split-pane {
+
+    ion-menu {
+      --width: 63%;
+    }
+  }
+
+  ion-content {
+    --background: var(--side-nav-background-color);
+
+    ul {
+      li {
+        a {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+
+          &.active-link {
+            color: var(--ion-color-secondary);
+            background-color: #fff;
+            nb-icon {
+              color: var(--ion-color-secondary);
+            }
+          }
+
+          nb-icon {
+            margin-left: 0;
+            margin-right: 10px;
+            font-size: 1rem;
+            width: 45px;
+          }
+        }
+
+        nb-accordion {
+          nb-accordion-item {
+            background-color: var(--side-nav-background-color);
+
+            nb-accordion-item-header {
+              display: flex;
+              border: none;
+              height: 70px;
+              padding-left: 0;
+
+
+              a{
+                display: flex;
+
+              }
+
+              &.accordion-item-header-expanded {
+                background-color: #fff;
+                color: var(--ion-color-secondary);
+                nb-icon {
+                  color: var(--ion-color-secondary);
+                }
+                a {
+                  color: var(--ion-color-secondary);
+
+                  .desktop-icon {
+                    color: var(--ion-color-secondary);
+                  }
+                }
+              }
+
+              nb-icon {
+                margin-left: 0;
+                margin-right: 5px;
+                font-size: 1rem;
+                width: 45px;
+              }
+            }
+
+            nb-accordion-item-body {
+              background-color: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+  div {
+    height: auto;
+    border-bottom: 2px solid #fff;
+    color: #fff;
+    background-color: var(--ion-color-primary);
+    font-size: 1.1rem;
+
+    .person-icon{
+      width: 32px;
+      height: auto;
+      background-color: #fff;
+      border-radius: 25px;
+      color: var(--ion-color-primary);
+      margin-right: 10px;
+      margin-top: 5px;
+    }
+    .meta-info {
+      padding-left: 20px;
+    }
+
+    ion-text {
+      span {
+        font-weight: 300;
+        font-size: 0.9rem;
+
+      }
+    }
+  }
+}
