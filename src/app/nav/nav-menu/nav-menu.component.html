@@ -7,7 +7,7 @@
     </ion-toolbar>
 
     <ion-content [scrollbar]="scroolStyle" color="sidenav">
-      <div lines="none" button routerLink="/nav/settings/account" *ngIf="isMobile" class="profile">
+      <div lines="none" button  *ngIf="isMobile" class="profile">
         <ion-row>
           <ion-col size="2" class="ion-padding">
             <ion-avatar slot="start" *ngIf="profilePicture; else profileIcon">
@@ -30,13 +30,13 @@
       <nav class="nav-menu">
         <ul>
           <li (click)="closeAllAccordion()">
-            <a routerLink="/nav/dashboard" routerLinkActive="active-link">
+            <a  routerLinkActive="active-link">
               <nb-icon icon="grid-outline" class="desktop-icon"></nb-icon>
               Dashboard
             </a>
           </li>
           <li (click)="closeAllAccordion()">
-            <a routerLink="/nav/measurements" routerLinkActive="active-link">
+            <a  routerLinkActive="active-link">
               <nb-icon icon="monitor-outline" class="desktop-icon"></nb-icon>
               Supervisão
             </a>
@@ -45,7 +45,7 @@
           <li>
             <nb-accordion #accordionNav>
               <nb-accordion-item [expanded]="activePath === 'analytics'">
-                <nb-accordion-item-header routerLink="/nav/analytics/kpis">
+                <nb-accordion-item-header >
                   <a>
                     <nb-icon icon="pie-chart-outline" class="desktop-icon"></nb-icon>
                     Análises
@@ -54,23 +54,23 @@
                 <nb-accordion-item-body>
                   <ul>
                     <li>
-                      <a routerLink="/nav/analytics/kpis" routerLinkActive="active-link-li"> KPIs </a>
+                      <a  routerLinkActive="active-link-li"> KPIs </a>
                     </li>
                     <li>
-                      <a routerLink="/nav/analytics/energy" routerLinkActive="active-link-li"> Energia </a>
+                      <a  routerLinkActive="active-link-li"> Energia </a>
                     </li>
                     <li>
-                      <a routerLink="/nav/analytics/financial" routerLinkActive="active-link-li"> Financeiro </a>
+                      <a r routerLinkActive="active-link-li"> Financeiro </a>
                     </li>
                     <li>
-                      <a routerLink="/nav/analytics/maintenance" routerLinkActive="active-link-li"> Manutenção </a>
+                      <a  routerLinkActive="active-link-li"> Manutenção </a>
                     </li>
                   </ul>
                 </nb-accordion-item-body>
               </nb-accordion-item>
 
-              <nb-accordion-item [expanded]="activePath === 'financial'">
-                <nb-accordion-item-header routerLink="/nav/financial/invoices">
+              <nb-accordion-item [expanded]="activePath === aliment">
+                <nb-accordion-item-header >
                   <a>
                     <nb-icon icon="file-outline" class="desktop-icon"></nb-icon>
                     Financeiro
@@ -80,17 +80,17 @@
                 <nb-accordion-item-body>
                   <ul>
                     <li>
-                      <a routerLink="/nav/financial/invoices" routerLinkActive="active-link-li"> Faturas </a>
+                      <a r routerLinkActive="active-link-li"> Faturas </a>
                     </li>
                     <li>
-                      <a routerLink="/nav/financial/contracts" routerLinkActive="active-link-li"> Contratos </a>
+                      <a  routerLinkActive="active-link-li"> Contratos </a>
                     </li>
                   </ul>
                 </nb-accordion-item-body>
               </nb-accordion-item>
 
               <nb-accordion-item [expanded]="activePath === 'setup'">
-                <nb-accordion-item-header routerLink="/nav/setup/locations">
+                <nb-accordion-item-header>
                   <a>
                     <nb-icon icon="settings-outline" class="desktop-icon"></nb-icon>
                     Instalação
@@ -99,22 +99,22 @@
                 <nb-accordion-item-body>
                   <ul>
                     <li>
-                      <a routerLink="/nav/setup/locations" routerLinkActive="active-link-li"> Locais monitorados </a>
+                      <a r routerLinkActive="active-link-li"> Locais monitorados </a>
                     </li>
                     <li>
-                      <a routerLink="/nav/setup/measuring-points" routerLinkActive="active-link-li"> Pontos supervisionados </a>
+                      <a  routerLinkActive="active-link-li"> Pontos supervisionados </a>
                     </li>
                     <li>
-                      <a routerLink="/nav/setup/gateways" routerLinkActive="active-link-li"> Gateways </a>
+                      <a  routerLinkActive="active-link-li"> Gateways </a>
                     </li>
                     <li>
-                      <a routerLink="/nav/setup/devices" routerLinkActive="active-link-li"> Dispositívos </a>
+                      <a  routerLinkActive="active-link-li"> Dispositívos </a>
                     </li>
                     <li>
-                      <a routerLink="/nav/setup/sensors" routerLinkActive="active-link-li"> Sensores </a>
+                      <a  routerLinkActive="active-link-li"> Sensores </a>
                     </li>
                     <li>
-                      <a routerLink="/nav/setup/actuators" routerLinkActive="active-link-li"> Atuadores </a>
+                      <a  routerLinkActive="active-link-li"> Atuadores </a>
                     </li>
                   </ul>
                 </nb-accordion-item-body>
@@ -126,7 +126,7 @@
     </ion-content>
     <ion-footer>
       <ion-toolbar class="ion-text-center" color="primary">
-        <a href="https://luminae.com.br/solucoes/gestao-inteligencia" target="_blank">
+        <a  target="_blank">
           <img src="assets/img/logo_mini_branca.png" class="nav-split-footer-img" />
         </a>
       </ion-toolbar>
@@ -137,11 +137,11 @@
 
   <ion-tabs *ngIf="isMobile" class="tab-mobile">
     <ion-tab-bar slot="bottom">
-      <ion-tab-button tab="notifications-history" routerLink="/nav/notifications-history" routerLinkActive="active-link">
+      <ion-tab-button tab="notifications-history"  routerLinkActive="active-link">
         <nb-icon icon="bell-outline" class="bell-icon"></nb-icon>
       </ion-tab-button>
 
-      <ion-tab-button tab="dashboard" routerLink="/nav/dashboard" routerLinkActive="active-link">
+      <ion-tab-button tab="dashboard"  routerLinkActive="active-link">
         <nb-icon icon="grid-outline" class="grid-icon"></nb-icon>
       </ion-tab-button>
 
